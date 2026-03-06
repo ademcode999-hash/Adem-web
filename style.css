@@ -10,6 +10,12 @@
     font-style: normal;
 }
 
+.a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .subhero{
     display: flex;
     flex-direction: column;
@@ -59,7 +65,7 @@ header{
 .head{
     color: rgb(255, 150, 0);
     text-decoration-line: none;
-    background-color: rgba(255, 255, 255, 0.750);
+    background-color: rgb(255, 255, 255);
     border-radius: 15px;
     margin: 5px;
     padding: 5px;
@@ -68,7 +74,7 @@ header{
 }
 
 .head:hover{
-    color: rgba(255, 255, 255, 0.568);
+    color: rgb(255, 255, 255);
     text-decoration-line: none;
     background-color: rgb(255, 150, 0);
     border-radius: 15px;
@@ -92,11 +98,8 @@ hr{
 }
 
 .hr{
-    padding: 3rem;
-}
-
-.logo{
-    width: 60px;
+    padding-left: 10rem;
+    padding-bottom: 6.45rem;
 }
 
 .hero{
@@ -161,16 +164,16 @@ li{
 
 .watermelon{
     align-items: center;
-    margin-left: 22rem;
     background-color: rgb(255, 150, 0);
     border: 2px solid;
     border-radius: 15px;
     color: white;
     cursor: pointer;
-    font-size: 40px;
-    width: 15rem;
-    padding: 4px 10px;
+    font-size: 15px;
+    width: 4.5rem;
+    padding: 10px 10px;
     transition: .2s ease;
+    text-decoration-line: none;
 }
 
 .watermelon:hover{
@@ -182,4 +185,36 @@ li{
 .watermelon:active{
     align-items: center;
     scale: .7;
+}
+
+.card{
+    display: flex;
+    justify-content: space-around;
+    align-items: left;
+    max-width: 300px;
+    text-decoration: none;
+}
+
+.card li{
+    background-color: rgba(255, 255, 255, 0.750);
+    border-radius: 16px;
+    background-size: 2px;
+    backdrop-filter: blur(4px);
+    list-style-type: none;
+}
+
+.card li a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgb(255, 150, 0);
+    margin: 5rem;
+    text-decoration: none;
+}
+
+.card li img{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 10.3rem;
 }
