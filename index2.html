@@ -3,16 +3,78 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tutorial</title>
+    <title>HTML Tutorial — Adem Code</title>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #07071a;
+            --accent: #ff9600;
+            --white: #f0f0ff;
+            --muted: #8888aa;
+            --card-bg: rgba(255,255,255,0.04);
+            --font-display: 'Syne', sans-serif;
+            --font-mono: 'Space Mono', monospace;
+        }
+        * { margin:0; padding:0; box-sizing:border-box; }
+        body {
+            background: var(--bg);
+            color: var(--white);
+            font-family: var(--font-mono);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+        }
+        .back {
+            position: fixed; top: 1.5rem; left: 1.5rem;
+            color: var(--accent);
+            font-size: 0.85rem;
+            border: 1px solid rgba(255,150,0,0.3);
+            padding: 8px 16px;
+            border-radius: 10px;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+        .back:hover { background: rgba(255,150,0,0.1); }
+
+        h1 {
+            font-family: var(--font-display);
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            margin-bottom: 0.5rem;
+        }
+        .label { color: var(--accent); font-size: 0.85rem; margin-bottom: 1.5rem; }
+
+        .video-wrap {
+            width: 100%;
+            max-width: 1000px;
+            border-radius: 16px;
+            overflow: hidden;
+            border: 1px solid rgba(255,150,0,0.2);
+            background: #000;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+        }
+        video { width: 100%; display: block; }
+
+        .coming-soon {
+            margin-top: 2rem;
+            color: var(--muted);
+            font-size: 0.8rem;
+        }
+    </style>
 </head>
 <body>
-    <section>
-        <div>
-            <video width="1343" height="624" controls>
-                <source src="movie.mp4" type="video/mp4">
-                <source src="movie.ogg" type="video/ogg">
-            </video>
-        </div>
-    </section>
+    <a href="index.html" class="back">← Back</a>
+    <p class="label">// tutorial</p>
+    <h1>HTML <span style="color:var(--accent)">Basics</span></h1>
+    <div class="video-wrap">
+        <video controls poster="icons8-html-144.png">
+            <source src="movie.mp4" type="video/mp4">
+            <source src="movie.ogg" type="video/ogg">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+    <p class="coming-soon">More tutorials coming soon on <a href="https://www.youtube.com/@AdemCode2011" target="_blank" style="color:var(--accent)">YouTube</a></p>
 </body>
 </html>

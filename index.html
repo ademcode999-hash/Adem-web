@@ -3,89 +3,177 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta porperty="og:title" content="Adem Web">
-    <meta porperty="og:description" content="my website">
-    <meta porperty="og:image" content="pixilart-drawing.png">
-    <meta porperty="og:type" content="website">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <meta property="og:title" content="Adem Web">
+    <meta property="og:description" content="Mohamed Adem Mosbah — Software Engineer">
+    <meta property="og:image" content="pixilart-drawing.png">
+    <meta property="og:type" content="website">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Syne:wght@700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <title>Mohamed Adem Mosbah</title>
 </head>
 <body>
-    <header>
-        <a href="#main" class="watermelon">Adem</a>
-        <nav class="navigation">
+    <div id="cursor-glow"></div>
+
+    <header id="header">
+        <button class="watermelon" id="watermelonBtn" aria-label="Confetti">🍉 Adem</button>
+        <nav class="navigation" aria-label="Main navigation">
             <ul>
-                <li><a href="#about" class="head">About Me</a></li>
-                <li><a href="#project" class="head">Project</a></li>
-                <li><a href="#tutorial" class="head">Tutorial</a></li>
-                <li><a href="#contate" class="head">Contate Me</a></li>
+                <li><a href="#about" class="head">About</a></li>
+                <li><a href="#projects" class="head">Projects</a></li>
+                <li><a href="#tutorials" class="head">Tutorials</a></li>
+                <li><a href="#contact" class="head">Contact</a></li>
             </ul>
+            <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">☰</button>
         </nav>
     </header>
-    <hr class="hr" id="main">
-    <section class="hero">
-        <div class="subhero">
-            <h1 class="name">I'm Mohamed Adem Mosbah</h1>
-            <h1 class="title">Software Engineer</h1>
+
+    <section class="hero" id="main">
+        <div class="hero-bg">
+            <span class="orb orb1"></span>
+            <span class="orb orb2"></span>
+            <span class="orb orb3"></span>
         </div>
-        <img src="pixilart-drawing.png" alt="sprit" loading="lazy" class="sprit">
-    </section>
-    <hr id="about" class="hr">
-    <div class="about">
-        <h1>Intermediate web and game developer.<br><br>
-            Ibuild responsive websites using<br><br>
-            HTML and CSS, and create 2D games<br><br>
-            with GODOT</h1>
-    </div>
-    <hr id="project" class="hr">
-    <section class="works">
-        <div class="worksContainer">
-        <ul>
-            <li>
-                <a class="a" href=""><img src="pixilart-drawing.png" alt="project" loading="lazy"></a> 
-            </li>
-        </ul>
-        <ul>
-            <li>
-                <a class="a" href=""><img src="pixilart-drawing.png" alt="project" loading="lazy"></a> 
-            </li>
-        </ul>
+        <div class="hero-content">
+            <p class="hero-tag">// hello world 👋</p>
+            <h1 class="hero-name">Mohamed<br><span class="accent">Adem</span> Mosbah</h1>
+            <h2 class="hero-title">Software Engineer</h2>
+            <div class="hero-skills">
+                <span class="skill-badge">HTML</span>
+                <span class="skill-badge">CSS</span>
+                <span class="skill-badge">JavaScript</span>
+                <span class="skill-badge">Godot</span>
+            </div>
+            <div class="hero-cta">
+                <a href="#projects" class="btn-primary">View Projects</a>
+                <a href="#contact" class="btn-secondary">Contact Me</a>
+            </div>
+        </div>
+        <div class="hero-avatar">
+            <div class="avatar-ring">
+                <img src="pixilart-drawing.png" alt="Mohamed Adem Mosbah" loading="lazy" class="sprite">
+            </div>
+            <div class="floating-icons">
+                <img src="icons8-html-144.png" alt="HTML" class="float-icon fi1">
+                <img src="icons8-css-144.png" alt="CSS" class="float-icon fi2">
+                <img src="icons8-js-144.png" alt="JS" class="float-icon fi3">
+                <img src="icons8-godot-100.png" alt="Godot" class="float-icon fi4">
+            </div>
         </div>
     </section>
-    <hr id="tutorial" class="hr">
-    <section>
-        <div">
-        <ul  class="card">
-            <li>
-                <a class="a" href="index2.html" target="_blank"><img src="icons8-html-144.png" alt="tutorial" loading="lazy">
+
+    <section class="about section" id="about">
+        <div class="section-inner">
+            <p class="section-label">// about me</p>
+            <h2 class="section-title">Who Am I?</h2>
+            <div class="about-grid">
+                <div class="about-card">
+                    <span class="card-icon">🌐</span>
+                    <h3>Web Developer</h3>
+                    <p>I build responsive, fast, and beautiful websites using HTML, CSS, and JavaScript.</p>
+                </div>
+                <div class="about-card">
+                    <span class="card-icon">🎮</span>
+                    <h3>Game Developer</h3>
+                    <p>I create 2D games with the Godot Engine — from concept to playable experience.</p>
+                </div>
+                <div class="about-card">
+                    <span class="card-icon">📚</span>
+                    <h3>Content Creator</h3>
+                    <p>I make tutorials and educational content to help others learn to code.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="projects section" id="projects">
+        <div class="section-inner">
+            <p class="section-label">// my work</p>
+            <h2 class="section-title">Projects</h2>
+            <div class="projects-grid">
+                <a class="project-card" href="#" target="_blank">
+                    <div class="project-thumb">
+                        <img src="pixilart-drawing.png" alt="Project 1" loading="lazy">
+                        <div class="project-overlay">
+                            <span>View Project →</span>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Project Name</h3>
+                        <p>HTML · CSS · JS</p>
+                    </div>
                 </a>
-            </li>
-            <li>
-                <a class="a" href="" target="_blank"><img src="icons8-css-144.png" alt="tutorial" loading="lazy">
-                </a> 
-            </li>
-            <li>
-                <a class="a"  href="" target="_blank"><img src="icons8-js-144.png" alt="tutorial" loading="lazy">
-                </a> 
-            </li>
-            <li>
-                <a class="a" href="" target="_blank"><img src="icons8-godot-100.png" alt="tutorial" loading="lazy">
-                </a> 
-            </li>
-        </ul>
+                <a class="project-card" href="#" target="_blank">
+                    <div class="project-thumb">
+                        <img src="pixilart-drawing.png" alt="Project 2" loading="lazy">
+                        <div class="project-overlay">
+                            <span>View Project →</span>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Project Name</h3>
+                        <p>Godot · GDScript</p>
+                    </div>
+                </a>
+                <a class="project-card" href="#" target="_blank">
+                    <div class="project-thumb">
+                        <img src="pixilart-drawing.png" alt="Project 3" loading="lazy">
+                        <div class="project-overlay">
+                            <span>View Project →</span>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Project Name</h3>
+                        <p>HTML · CSS</p>
+                    </div>
+                </a>
+            </div>
         </div>
     </section>
-    <hr id="contate" class="hr">
-    <footer class="works">
-        <div class="worksContainer">
-        <ul>
-            <li>
-                <a class="a" href="https://www.youtube.com/@AdemCode2011" target="_blank"><img src="icons8-youtube.svg" alt="youtube" loading="lazy"></a> 
-            </li>
-        </ul>
+
+    <section class="tutorials section" id="tutorials">
+        <div class="section-inner">
+            <p class="section-label">// learn with me</p>
+            <h2 class="section-title">Tutorials</h2>
+            <div class="tutorials-grid">
+                <a class="tut-card" href="index2.html" target="_blank">
+                    <img src="icons8-html-144.png" alt="HTML Tutorial" loading="lazy">
+                    <span>HTML</span>
+                </a>
+                <a class="tut-card" href="#" target="_blank">
+                    <img src="icons8-css-144.png" alt="CSS Tutorial" loading="lazy">
+                    <span>CSS</span>
+                </a>
+                <a class="tut-card" href="#" target="_blank">
+                    <img src="icons8-js-144.png" alt="JS Tutorial" loading="lazy">
+                    <span>JavaScript</span>
+                </a>
+                <a class="tut-card" href="#" target="_blank">
+                    <img src="icons8-godot-100.png" alt="Godot Tutorial" loading="lazy">
+                    <span>Godot</span>
+                </a>
+            </div>
         </div>
+    </section>
+
+    <section class="contact section" id="contact">
+        <div class="section-inner">
+            <p class="section-label">// get in touch</p>
+            <h2 class="section-title">Contact Me</h2>
+            <p class="contact-sub">Have a project idea or want to collaborate? Let's talk!</p>
+            <div class="social-links">
+                <a href="https://www.youtube.com/@AdemCode2011" target="_blank" class="social-btn youtube">
+                    <img src="icons8-youtube.svg" alt="YouTube" loading="lazy">
+                    <span>AdemCode2011</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>© 2025 <span class="accent">Mohamed Adem Mosbah</span> · Built with 🍉 and code</p>
     </footer>
+
     <script src="https://cdn.jsdelivr.net/npm/js-confetti@0.11.0/dist/js-confetti.browser.js"></script>
     <script src="script.js"></script>
 </body>
